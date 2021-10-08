@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/backg">
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logoapp" />
+
+        <TextView
+            android:id="@+id/txtbangdaru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Bang Daru"
+            android:textColor="#E5FFFF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtmenghitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtbangdaru"
+            android:text="Menghitung Keliling, Luas, dan Volume"
+            android:textColor="#E5FFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtdataruang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtmenghitung"
+            android:text="Bangun Datar dan Bangun Ruang"
+            android:textColor="#E5FFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+        <GridLayout
+            android:columnCount="1"
+            android:rowCount="1"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00B89E"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Bangun Datar"
+                        android:textColor="#ffff"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/bdatar"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/bangundatar" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/cardBruang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#009CB8"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Bangun Ruang"
+                        android:textColor="#ffff"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/cardBRuang"
+                        android:layout_width="135dp"
+                        android:layout_height="91dp"
+                        android:layout_alignParentRight="true"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/bangunruang" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00B89E"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Keluar"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="#ffff"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentRight="true"
+                        android:onClick="quitApp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/shut" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+</LinearLayout>

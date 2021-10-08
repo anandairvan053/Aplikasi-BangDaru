@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrismaActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bgbr">
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/prism" />
+
+        <TextView
+            android:id="@+id/txtprisma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Prisma"
+            android:textColor="#E5FFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtprisma"
+            android:text="Luas dan Volume"
+            android:textColor="#E5FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
+
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/gbrprisma"
+                    android:layout_width="match_parent"
+                    android:layout_height="202dp"
+                    android:src="@drawable/rumus_prisma"/>
+
+                <TextView
+                    android:id="@+id/txtpanjang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gbrprisma"
+                    android:layout_marginTop="10dp"
+                    android:text="Panjang"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etpanjangblk"
+                    android:layout_width="293dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/gbrprisma"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/txtvolume"
+                    android:background="#009688"
+                    android:hint="Masukkan Panjang"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txtlebar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtpanjang"
+                    android:layout_marginTop="25dp"
+                    android:text="Lebar"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etlebarblk"
+                    android:layout_width="293dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/etpanjangblk"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtvolume"
+                    android:background="#009688"
+                    android:hint="Masukkan Lebar"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txttinggi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtlebar"
+                    android:layout_marginTop="25dp"
+                    android:text="Tinggi"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ettinggi"
+                    android:layout_width="293dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/etlebarblk"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtvolume"
+                    android:background="#009688"
+                    android:hint="Masukkan Tinggi"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnHitungblk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ettinggi"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:text="Hitung"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txtHasil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnHitungblk"
+                    android:layout_marginTop="10dp"
+                    android:text="Hasil"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtluas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHasil"
+                    android:layout_marginTop="20dp"
+                    android:text="Luas"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txthslluasblk"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHasil"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/txtvolume"
+                    android:background="#009688"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtvolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtluas"
+                    android:layout_marginTop="30dp"
+                    android:text="Volume"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txthslvolumeblk"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txthslluasblk"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/txtvolume"
+                    android:background="#009688"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
