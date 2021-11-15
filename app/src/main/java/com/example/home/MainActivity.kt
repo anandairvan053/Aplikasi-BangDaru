@@ -4,37 +4,61 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
+import androidx.appcompat.app.AlertDialog
 import kotlin.system.exitProcess
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
-    lateinit var bangundatar: ImageButton
-    lateinit var bangunruang: ImageButton
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        bangundatar = findViewById(R.id.bdatar)
-
-        bangundatar.setOnClickListener(this)
-        bangunruang = findViewById(R.id.cardBRuang)
-
-        bangunruang.setOnClickListener(this)
     }
-    override fun onClick(v: View) {
-        when (v.id) {
-            R.id.bdatar -> run {
-                val bangundatar = Intent(this@MainActivity, SecondActivity::class.java)
-                startActivity(bangundatar)
-            }
-            R.id.cardBRuang -> run {
-                val BangunRuang = Intent(this@MainActivity, ThirdActivity::class.java)
-                startActivity(BangunRuang)
-            }
-        }
+
+    fun datarMenu (view: View){
+        val bangundatar = Intent(this@MainActivity, SecondActivity::class.java)
+        startActivity(bangundatar)
+        finish()
     }
+
+    fun ruangMenu (view: View){
+        val bangunruang = Intent(this@MainActivity, ThirdActivity::class.java)
+        startActivity(bangunruang)
+        finish()
+    }
+
+    fun tentaruangMenu (view: View){
+        val bangundatardanruang = Intent(this@MainActivity, FourthActivity::class.java)
+        startActivity(bangundatardanruang)
+        finish()
+    }
+
+    fun tentangMenu (view: View){
+        val menutentang = Intent(this@MainActivity, FifthActivity::class.java)
+        startActivity(menutentang)
+        finish()
+    }
+
     fun quitApp(view: View) {
-        this@MainActivity.finish()
-        exitProcess(0)
+        val builder = AlertDialog.Builder(this@MainActivity)
+        builder.setTitle("Konfirmasi Keluar")
+        builder.setMessage("Apakah anda yakin mau keluar aplikasi ?")
+        builder.setPositiveButton(
+            "Ya"
+        ) { dialog, which -> finish() }
+        builder.setNegativeButton("Tidak", null)
+        val alertDialog = builder.create()
+        alertDialog.show()
+    }
+
+    override fun onBackPressed() {
+        val builder = AlertDialog.Builder(this@MainActivity)
+        builder.setTitle("Konfirmasi Keluar")
+        builder.setMessage("Apakah anda yakin mau keluar aplikasi ?")
+        builder.setPositiveButton(
+            "Ya"
+        ) { dialog, which -> finish() }
+        builder.setNegativeButton("Tidak", null)
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 }

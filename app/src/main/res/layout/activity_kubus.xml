@@ -7,26 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".KubusActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bgbr">
+    android:background="@drawable/menu">
 
     <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#009CB8">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/kubus"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/kubus2"/>
 
         <TextView
             android:id="@+id/txtkubus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="Kubus"
             android:textColor="#E5FFFF"
@@ -36,6 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/txtkubus"
             android:text="Luas dan Volume"
             android:textColor="#E5FFFF"
@@ -88,6 +91,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtvolumekbs"
                     android:background="#009688"
+                    android:inputType="number"
                     android:hint="Masukkan Panjang Rusuk"
                     android:textAlignment="center" />
 

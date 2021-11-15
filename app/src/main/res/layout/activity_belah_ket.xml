@@ -7,26 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".BelahKetActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bgdbd">
+    android:background="@drawable/menu">
 
     <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#00B89E">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/belahket"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/belahket" />
 
         <TextView
             android:id="@+id/txtbelahket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="Belah Ketupat"
             android:textColor="#E5FFFF"
@@ -37,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtbelahket"
+            android:layout_marginLeft="30dp"
             android:text="Keliling dan Luas"
             android:textColor="#E5FFFF"
             android:textSize="20sp"
@@ -66,7 +69,7 @@
                     android:id="@+id/gbrbelahket"
                     android:layout_width="match_parent"
                     android:layout_height="202dp"
-                    android:src="@drawable/rumus_belahketupat"/>
+                    android:src="@drawable/rumus_belahketupat" />
 
                 <TextView
                     android:id="@+id/txtd1"
@@ -89,10 +92,22 @@
                     android:layout_toRightOf="@id/txtd1"
                     android:background="#009688"
                     android:hint="Masukkan Diagonal 1"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/txtd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtd1"
+                    android:layout_marginTop="74dp"
+                    android:text="Sisi"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtd1"
@@ -103,22 +118,36 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/ets"
+                    android:layout_width="293dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/etd1"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_toRightOf="@id/txtd2"
+                    android:background="#009688"
+                    android:hint="Masukkan Sisi"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <EditText
                     android:id="@+id/etd2"
                     android:layout_width="293dp"
                     android:layout_height="38dp"
                     android:layout_below="@id/etd1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="13dp"
                     android:layout_toRightOf="@id/txtd2"
                     android:background="#009688"
                     android:hint="Masukkan Diagonal 2"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/btnHitungblk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/etd2"
+                    android:layout_below="@id/ets"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
                     android:backgroundTint="#000000"

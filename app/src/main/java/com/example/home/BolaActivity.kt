@@ -1,11 +1,13 @@
 package com.example.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class BolaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,12 +32,19 @@ class BolaActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 jariBola = editJari.getText().toString().toDouble()
                 volumeBola = (4 * 3.14 * jariBola!! * jariBola!! * jariBola!!) / 3
-                hasilVolume.setText(volumeBola.toString())
+                hasilVolume.setText(DF.format(volumeBola).toString())
                 luasBola = 4 * 3.14 * jariBola!! * jariBola!!
-                hasilLuas.setText(luasBola.toString())
+                hasilLuas.setText(DF.format(luasBola).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@BolaActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }

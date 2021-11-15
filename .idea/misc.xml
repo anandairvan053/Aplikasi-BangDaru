@@ -5,20 +5,66 @@
       <map>
         <entry key="..\:/BangDaru/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2037037037037037" />
         <entry key="..\:/BangDaru/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2037037037037037" />
+        <entry key="..\:/BangDaru/app/src/main/res/font/.xml" value="0.1265625" />
         <entry key="..\:/BangDaru/app/src/main/res/font/roboto.xml" value="0.19907407407407407" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_balok.xml" value="0.1" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_belah_ket.xml" value="0.1" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_bola.xml" value="0.1082427536231884" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_kerucut.xml" value="0.1082427536231884" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_kubus.xml" value="0.1" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_layang.xml" value="0.1" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_limas.xml" value="0.1082427536231884" />
-        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_lingkaran.xml" value="0.1" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_per_panjang.xml" value="0.1213768115942029" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_persegi.xml" value="0.1" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_prisma.xml" value="0.1" />
-        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_second.xml" value="0.11503623188405797" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_second.xml" value="0.22" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_segitiga.xml" value="0.1" />
         <entry key="..\:/BangDaru/app/src/main/res/layout/activity_tabung.xml" value="0.1082427536231884" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_third.xml" value="0.25" />
+        <entry key="..\:/BangDaru/app/src/main/res/layout/activity_trapesium.xml" value="0.1" />
         <entry key="..\:/BangDaru/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2037037037037037" />
         <entry key="..\:/BangDaru/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/Firman/AndroidStudioProjects/BangDaru/app/src/main/res/layout/activity_main.xml" value="0.75" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_balok.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_belah_ket.xml" value="0.18" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_bola.xml" value="0.33" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_balok.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_bel_ket.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_bola.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_kerucut.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_kubus.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_layang.xml" value="0.20416666666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_limas.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_lingkaran.xml" value="0.20416666666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_per_panjang.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_persegi.xml" value="0.22" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_prisma.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_segitiga.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_tabung.xml" value="0.33" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_ciri_trapesium.xml" value="0.20416666666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_fifth.xml" value="0.2" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_fourth.xml" value="0.2" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_kerucut.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_kubus.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_layang.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_limas.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_lingkaran.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_per_panjang.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_persegi.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_prisma.xml" value="0.18" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_segitiga.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_seven.xml" value="0.19010416666666666" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_six.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_tabung.xml" value="0.25" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_third.xml" value="0.15" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/layout/activity_trapesium.xml" value="0.22" />
+        <entry key="..\:/test/BangDaru Versi 2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -27,5 +73,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -10,6 +10,63 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Home">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriPrismaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriLimasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriBolaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriKerucutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriTabungActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriBalokActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriKubusActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriBelKetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriTrapesiumActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriLayangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriSegitigaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriLingkaranActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriPerPanjangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CiriPersegiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SevenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SixActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FifthActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FourthActivity"
+            android:exported="true" />
+        <activity
             android:name=".PrismaActivity"
             android:exported="true" />
         <activity
@@ -58,7 +115,7 @@
             android:name=".SecondActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TrapesiumActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bgdbd">
+    android:background="@drawable/menu">
 
     <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#00B89E">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/trapesium"/>
 
         <TextView
             android:id="@+id/txttrapesium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="Trapesium"
             android:textColor="#E5FFFF"
@@ -35,6 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/txttrapesium"
             android:text="Keliling dan Luas"
             android:textColor="#E5FFFF"
@@ -65,37 +69,38 @@
                     android:id="@+id/gbrtrapesium"
                     android:layout_width="match_parent"
                     android:layout_height="202dp"
-                    android:src="@drawable/rumus_trapesium"/>
+                    android:src="@drawable/rumus_trapesium" />
 
                 <TextView
-                    android:id="@+id/txtalas"
+                    android:id="@+id/txtbawah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/gbrtrapesium"
                     android:layout_marginTop="10dp"
-                    android:text="Alas"
+                    android:text="Sisi Bawah"
                     android:textColor="#000000"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etalas"
-                    android:layout_width="293dp"
+                    android:id="@+id/etbawah"
+                    android:layout_width="245dp"
                     android:layout_height="38dp"
                     android:layout_below="@id/gbrtrapesium"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="61dp"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtkeliling"
                     android:background="#009688"
-                    android:hint="Masukkan Panjang Alas"
+                    android:hint="Masukkan Sisi Bawah"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/txtatas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txtalas"
-                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/txtbawah"
+                    android:layout_marginTop="15dp"
                     android:text="Sisi Atas"
                     android:textColor="#000000"
                     android:textSize="25sp"
@@ -103,14 +108,15 @@
 
                 <EditText
                     android:id="@+id/etatas"
-                    android:layout_width="293dp"
+                    android:layout_width="245dp"
                     android:layout_height="38dp"
-                    android:layout_below="@id/etalas"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/etbawah"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtkeliling"
                     android:background="#009688"
                     android:hint="Masukkan Sisi Atas"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <TextView
@@ -118,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtatas"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="Tinggi"
                     android:textColor="#000000"
                     android:textSize="25sp"
@@ -126,21 +132,70 @@
 
                 <EditText
                     android:id="@+id/etltinggiblk"
-                    android:layout_width="293dp"
+                    android:layout_width="245dp"
                     android:layout_height="38dp"
                     android:layout_below="@id/etatas"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtkeliling"
                     android:background="#009688"
                     android:hint="Masukkan Tinggi"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txtsisi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txttinggi"
+                    android:layout_marginTop="15dp"
+                    android:text="Sisi 1"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etsisi1"
+                    android:layout_width="245dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/etltinggiblk"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/txtkeliling"
+                    android:background="#009688"
+                    android:hint="Masukkan Sisi 1"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txtsisi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtsisi1"
+                    android:layout_marginTop="15dp"
+                    android:text="Sisi 2"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etsisi2"
+                    android:layout_width="245dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/etsisi1"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/txtkeliling"
+                    android:background="#009688"
+                    android:hint="Masukkan Sisi 2"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/btnHitungblk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/etltinggiblk"
+                    android:layout_below="@id/etsisi2"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
                     android:backgroundTint="#000000"
@@ -154,8 +209,8 @@
                     android:layout_below="@id/btnHitungblk"
                     android:layout_marginTop="10dp"
                     android:text="Hasil"
-                    android:textColor="#000000"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -173,10 +228,10 @@
                 <TextView
                     android:id="@+id/txthslkeliling"
                     android:layout_width="255dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="38dp"
                     android:layout_below="@id/txtHasil"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtkeliling"
                     android:background="#009688"
                     android:text="0"
@@ -190,19 +245,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txtkeliling"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:text="Luas"
                     android:textColor="#000000"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txthsluaspp"
-                    android:layout_width="255dp"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/txthsluas"
+                    android:layout_width="245dp"
+                    android:layout_height="38dp"
                     android:layout_below="@id/txthslkeliling"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtkeliling"
                     android:background="#009688"
                     android:text="0"

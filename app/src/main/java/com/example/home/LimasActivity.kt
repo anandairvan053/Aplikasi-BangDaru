@@ -1,18 +1,20 @@
 package com.example.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class LimasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_limas)
         val btnHitung = findViewById<Button>(R.id.btnHitungblk)
-        val editAlas = findViewById<EditText>(R.id.etalas)
+        val editAlas = findViewById<EditText>(R.id.etbawah)
         val editTinggiSisi = findViewById<EditText>(R.id.ettinggisisi)
         val editTinggiLimas = findViewById<EditText>(R.id.ettinggilms)
         val hasilVolume = findViewById<TextView>(R.id.txthslvolumeblk)
@@ -36,14 +38,21 @@ class LimasActivity : AppCompatActivity() {
                 ).show()
             }
             else {
+                val DF = DecimalFormat("#.##")
                 alasLimas = editAlas.getText().toString().toDouble()
                 tinggiLimas = editTinggiLimas.getText().toString().toDouble()
                 tinggisisiLimas = editTinggiSisi.getText().toString().toDouble()
                 volumeLimas = (alasLimas!! * alasLimas!! * tinggiLimas!!) / 3
-                hasilVolume.setText(volumeLimas.toString())
+                hasilVolume.setText(DF.format(volumeLimas).toString())
                 luasLimas = 2*(alasLimas!! * tinggisisiLimas!!) + (alasLimas!! * alasLimas!!)
-                hasilLuas.setText(luasLimas.toString())
+                hasilLuas.setText(DF.format(luasLimas).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@LimasActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }

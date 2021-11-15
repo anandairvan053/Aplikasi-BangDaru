@@ -7,20 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".LingkaranActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bgdbd">
+    android:background="@drawable/menu">
 
     <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#00B89E">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/lingkaran" />
 
         <TextView
@@ -28,6 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:text="Lingkaran"
             android:textColor="#E5FFFF"
             android:textSize="40sp"
@@ -36,6 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/txtlingkaran"
             android:text="Keliling dan Luas"
             android:textColor="#E5FFFF"
@@ -88,6 +91,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/txtjari"
                     android:background="#009688"
+                    android:inputType="number"
                     android:hint="Masukkan Jari-Jari"
                     android:textAlignment="center" />
 

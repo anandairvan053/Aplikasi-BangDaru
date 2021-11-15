@@ -1,11 +1,13 @@
 package com.example.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class KerucutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,15 +37,22 @@ class KerucutActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 jariKerucut = editJari.getText().toString().toDouble()
                 tinggiKerucut = editTinggi.getText().toString().toDouble()
                 volumeKerucut = (3.14 * jariKerucut!! * jariKerucut!! * tinggiKerucut!!) / 3
-                hasilVolume.setText(volumeKerucut.toString())
+                hasilVolume.setText(DF.format(volumeKerucut).toString())
                 garispelukisKuadrat = (jariKerucut!! * jariKerucut!!) + (tinggiKerucut!! * tinggiKerucut!!)
                 garispelukis = Math.sqrt(garispelukisKuadrat!!)
                 luasKerucut = 3.14 * jariKerucut!! * (jariKerucut!! + garispelukis!!)
-                hasilLuas.setText(luasKerucut.toString())
+                hasilLuas.setText(DF.format(luasKerucut).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@KerucutActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }

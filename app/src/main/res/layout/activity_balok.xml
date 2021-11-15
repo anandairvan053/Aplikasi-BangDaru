@@ -7,26 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".BalokActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bgbr">
+    android:background="@drawable/menu">
 
     <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#009CB8">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/balok"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/balok2" />
 
         <TextView
             android:id="@+id/txtbalok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="Balok"
             android:textColor="#E5FFFF"
@@ -36,6 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/txtbalok"
             android:text="Luas dan Volume"
             android:textColor="#E5FFFF"
@@ -89,6 +92,7 @@
                     android:layout_toRightOf="@id/txtvolume"
                     android:background="#009688"
                     android:hint="Masukkan Panjang"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <TextView
@@ -110,6 +114,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="15dp"
                     android:layout_toRightOf="@id/txtvolume"
+                    android:inputType="number"
                     android:background="#009688"
                     android:hint="Masukkan Lebar"
                     android:textAlignment="center" />
@@ -135,6 +140,7 @@
                     android:layout_toRightOf="@id/txtvolume"
                     android:background="#009688"
                     android:hint="Masukkan Tinggi"
+                    android:inputType="number"
                     android:textAlignment="center" />
 
                 <Button

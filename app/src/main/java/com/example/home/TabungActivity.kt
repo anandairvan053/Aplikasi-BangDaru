@@ -1,11 +1,13 @@
 package com.example.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class TabungActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,13 +35,20 @@ class TabungActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 jariTabung = editJari.getText().toString().toDouble()
                 tinggiTabung = editTinggi.getText().toString().toDouble()
                 volumeTabung = 3.14 * jariTabung!! * jariTabung!! * tinggiTabung!!
-                hasilVolume.setText(volumeTabung.toString())
+                hasilVolume.setText(DF.format(volumeTabung).toString())
                 luasTabung = 2 * 3.14 * jariTabung!! * (jariTabung!! + tinggiTabung!!)
-                hasilLuas.setText(luasTabung.toString())
+                hasilLuas.setText(DF.format(luasTabung).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@TabungActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }

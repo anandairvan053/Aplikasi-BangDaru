@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class PerPanjangActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,14 +29,20 @@ class PerPanjangActivity : AppCompatActivity() {
             if (editpanjang.getText().toString().trim().isEmpty() ||  editlebar.getText().toString().trim().isEmpty()){
                 Toast.makeText(this@PerPanjangActivity, "Panjang dan lebar tidak boleh kosong", Toast.LENGTH_SHORT ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 panjangPersegipanjang = editpanjang.getText().toString().toDouble()
                 lebarPersegipanjang = editlebar.getText().toString().toDouble()
                 kelilingPersegipanjang = 2*panjangPersegipanjang!!  + 2*lebarPersegipanjang!!
-                hasilKeliling.setText(kelilingPersegipanjang.toString())
+                hasilKeliling.setText(DF.format(kelilingPersegipanjang).toString())
                 luasPersegipanjang = panjangPersegipanjang!! * lebarPersegipanjang!!
-                hasilLuas.setText(luasPersegipanjang.toString())
+                hasilLuas.setText(DF.format(luasPersegipanjang).toString())
             }
         }
     }
 
+    override fun onBackPressed() {
+        val batal = Intent(this@PerPanjangActivity, SecondActivity::class.java)
+        startActivity(batal)
+        finish()
+    }
 }

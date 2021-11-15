@@ -1,11 +1,13 @@
 package com.example.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class PrismaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,15 +38,22 @@ class PrismaActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 panjangPrisma = editPanjang.getText().toString().toDouble()
                 lebarPrisma = editLebar.getText().toString().toDouble()
                 tinggiPrisma = editTinggi.getText().toString().toDouble()
                 volumePrisma = (panjangPrisma!! * lebarPrisma!! * tinggiPrisma!!) / 2
-                hasilVolume.setText(volumePrisma.toString())
+                hasilVolume.setText(DF.format(volumePrisma).toString())
                 luasPrisma =
                     (3 * panjangPrisma!! * lebarPrisma!!) + (lebarPrisma!! * tinggiPrisma!!)
-                hasilLuas.setText(luasPrisma.toString())
+                hasilLuas.setText(DF.format(luasPrisma).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@PrismaActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }

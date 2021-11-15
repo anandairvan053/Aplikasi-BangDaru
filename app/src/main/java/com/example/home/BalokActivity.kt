@@ -1,11 +1,13 @@
 package com.example.home
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import java.text.DecimalFormat
 
 class BalokActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,15 +37,22 @@ class BalokActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                val DF = DecimalFormat("#.##")
                 panjangBalok = editPanjang.getText().toString().toDouble()
                 lebarBalok = editLebar.getText().toString().toDouble()
                 tinggiBalok = editTinggi.getText().toString().toDouble()
                 volumeBalok = panjangBalok!! * lebarBalok!! * tinggiBalok!!
-                hasilVolume.setText(volumeBalok.toString())
+                hasilVolume.setText(DF.format(volumeBalok).toString())
                 luasBalok = 2*(panjangBalok!! * tinggiBalok!!) + 2*(panjangBalok!! * lebarBalok!!) +
                         2*(lebarBalok!! * tinggiBalok!!)
-                hasilLuas.setText(luasBalok.toString())
+                hasilLuas.setText(DF.format(luasBalok).toString())
             }
         }
+    }
+
+    override fun onBackPressed() {
+        val batal = Intent(this@BalokActivity, ThirdActivity::class.java)
+        startActivity(batal)
+        finish()
     }
 }
